@@ -16,29 +16,30 @@ core
 # that core/assets/vendor and any other vendor directories within contrib or
 # custom module, theme, etc., are not ignored unless you purposely do so.
 /vendor/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
 
 # Ignore configuration files that may contain sensitive information.
-sites/*/settings*.php
-sites/*/services*.yml
+/web/sites/*/settings.local.php
 
 # Ignore paths that contain user-generated content.
-sites/*/files
-sites/*/private
+/web/sites/*/files
+/web/sites/*/private
 
 # Ignore SimpleTest multi-site environment.
-sites/simpletest
-
-# If you prefer to store your .gitignore file in the sites/ folder, comment
-# or delete the previous settings and uncomment the following ones, instead.
-
-# Ignore configuration files that may contain sensitive information.
-# */settings*.php
-
-# Ignore paths that contain user-generated content.
-# */files
-# */private
+/web/sites/simpletest
 
 # Ignore SimpleTest multi-site environment.
 # simpletest
 /.editorconfig
 /.gitattributes
+
+# Ignore Database dumps
+*.sql
+*.mysql
+*.sql.gz
+
+# Ignore node.js
+node_modules

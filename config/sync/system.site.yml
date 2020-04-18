@@ -1,0 +1,14 @@
+uuid: 565e1ee6-28c9-4792-8469-189653ec9132
+name: CertainTLS
+mail: certaintls@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

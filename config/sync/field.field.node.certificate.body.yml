@@ -1,0 +1,23 @@
+uuid: 10cc299d-1ce8-4e01-bf87-1a0685f68e80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.certificate
+  module:
+    - text
+id: node.certificate.body
+field_name: body
+entity_type: node
+bundle: certificate
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

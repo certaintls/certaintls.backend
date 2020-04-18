@@ -1,0 +1,38 @@
+uuid: f36dd700-27fd-44b2-ad4e-59a78f3bb60f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.certificate.body
+    - field.field.node.certificate.field_country
+    - field.field.node.certificate.field_program
+    - field.field.node.certificate.field_spki_sha256
+    - field.field.node.certificate.field_trustworthy
+    - node.type.certificate
+  module:
+    - text
+    - user
+id: node.certificate.teaser
+targetEntityType: node
+bundle: certificate
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_country: true
+  field_program: true
+  field_spki_sha256: true
+  field_trustworthy: true

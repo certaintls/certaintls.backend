@@ -1,0 +1,17 @@
+uuid: 3f4a827c-73ce-4133-bef7-7db78a0c038b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Certificate
+type: certificate
+description: 'A TLS (root) certificate'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

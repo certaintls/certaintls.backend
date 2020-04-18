@@ -1,0 +1,21 @@
+uuid: 3bffb978-014d-4a8e-8720-8e80cfc91d64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program
+    - node.type.certificate
+  module:
+    - options
+id: node.certificate.field_program
+field_name: field_program
+entity_type: node
+bundle: certificate
+label: 'Root CA program'
+description: 'If the cert is a root cert, then which program endorse it'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

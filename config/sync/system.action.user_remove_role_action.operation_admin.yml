@@ -1,0 +1,14 @@
+uuid: 1eb0702c-0e6d-49ec-8218-f1a462520623
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.operation_admin
+  module:
+    - user
+id: user_remove_role_action.operation_admin
+label: 'Remove the Operation Admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: operation_admin

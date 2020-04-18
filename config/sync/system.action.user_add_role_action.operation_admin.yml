@@ -1,0 +1,14 @@
+uuid: a2228f2d-adad-4f4d-b6c3-02cbd84c28b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.operation_admin
+  module:
+    - user
+id: user_add_role_action.operation_admin
+label: 'Add the Operation Admin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: operation_admin

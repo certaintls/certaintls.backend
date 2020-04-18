@@ -1,0 +1,23 @@
+uuid: 188dbcf0-5deb-424b-8636-3046aafdf136
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trustworthy
+    - node.type.certificate
+id: node.certificate.field_trustworthy
+field_name: field_trustworthy
+entity_type: node
+bundle: certificate
+label: Trustworthy
+description: 'Companies based in a country with a < 40 Freedom in the World score will be marked as untrustworthy'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -1,0 +1,66 @@
+uuid: 34018f0e-29af-4f86-a9ca-edd314b74b56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.certificate.body
+    - field.field.node.certificate.field_country
+    - field.field.node.certificate.field_program
+    - field.field.node.certificate.field_spki_sha256
+    - field.field.node.certificate.field_trustworthy
+    - node.type.certificate
+  module:
+    - address
+    - options
+    - text
+    - user
+id: node.certificate.default
+targetEntityType: node
+bundle: certificate
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_country:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_country_default
+    region: content
+  field_program:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_spki_sha256:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_trustworthy:
+    weight: 103
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
