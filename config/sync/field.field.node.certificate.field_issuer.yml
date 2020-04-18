@@ -1,0 +1,19 @@
+uuid: 6e73a36a-5336-448b-bea6-e5413ba89596
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_issuer
+    - node.type.certificate
+id: node.certificate.field_issuer
+field_name: field_issuer
+entity_type: node
+bundle: certificate
+label: 'Issuer’s name'
+description: 'The name of the issuer'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

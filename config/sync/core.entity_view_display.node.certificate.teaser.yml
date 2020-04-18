@@ -5,10 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.certificate.body
+    - field.field.node.certificate.field_cert_sha256
     - field.field.node.certificate.field_country
+    - field.field.node.certificate.field_issuer
     - field.field.node.certificate.field_program
     - field.field.node.certificate.field_spki_sha256
     - field.field.node.certificate.field_trustworthy
+    - field.field.node.certificate.field_type
     - node.type.certificate
   module:
     - text
@@ -32,7 +35,10 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_cert_sha256: true
   field_country: true
+  field_issuer: true
   field_program: true
   field_spki_sha256: true
   field_trustworthy: true
+  field_type: true

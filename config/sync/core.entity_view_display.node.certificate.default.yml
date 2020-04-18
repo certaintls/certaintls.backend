@@ -4,10 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.certificate.body
+    - field.field.node.certificate.field_cert_sha256
     - field.field.node.certificate.field_country
+    - field.field.node.certificate.field_issuer
     - field.field.node.certificate.field_program
     - field.field.node.certificate.field_spki_sha256
     - field.field.node.certificate.field_trustworthy
+    - field.field.node.certificate.field_type
     - node.type.certificate
   module:
     - address
@@ -26,12 +29,28 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_cert_sha256:
+    weight: 108
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_country:
     weight: 105
     label: above
     settings: {  }
     third_party_settings: {  }
     type: address_country_default
+    region: content
+  field_issuer:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_program:
     weight: 102
@@ -50,6 +69,16 @@ content:
     region: content
   field_trustworthy:
     weight: 103
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_type:
+    weight: 107
     label: above
     settings:
       format: default

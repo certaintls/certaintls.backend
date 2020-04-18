@@ -1,0 +1,23 @@
+uuid: 10c86ebe-1bdb-4fdf-8cf9-e3eb13f095e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type
+    - node.type.certificate
+id: node.certificate.field_type
+field_name: field_type
+entity_type: node
+bundle: certificate
+label: Type
+description: 'Indicates whether this root certificate is stock, managed by CertainTLS backend or custom, whose information collected from front end'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Stock
+  off_label: Custom
+field_type: boolean
