@@ -1,0 +1,18 @@
+<?php
+
+use Drupal\Core\Entity\EntityTypeInterface;
+
+/**
+ * Implements hook_entity_bundle_field_info_alter().
+ * Make certificate field_cert_sha256 and field_spki_sha256 unique.
+ */
+function custom_entity_bundle_field_info_alter(&$fields, EntityTypeInterface $entity_type, $bundle) {
+  if ($entity_type->id() === 'node' && $bundle === 'certificate') {
+    if (isset($fields['field_cert_sha256'])) {
+      $fields['field_cert_sha256']->addConstraint('UniqueField', []);
+    }
+    if (isset($fields['field_spki_sha256'])) {
+      $fields['field_spki_sha256']->addConstraint('UniqueField', []);
+    }
+  }
+}

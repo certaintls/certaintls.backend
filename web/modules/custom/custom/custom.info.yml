@@ -1,0 +1,6 @@
+name: Customization
+type: module
+description: Most arbitrary customization 
+core: 8.x
+package: Custom
+dependencies:
