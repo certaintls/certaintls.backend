@@ -43,3 +43,6 @@ core
 
 # Ignore node.js
 node_modules
+
+# OAuth2 keys
+/keys
