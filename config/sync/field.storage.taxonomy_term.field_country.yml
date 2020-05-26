@@ -1,12 +1,12 @@
-uuid: 4e893d22-5b5c-4524-964d-ed98291e7d94
+uuid: 37ca1e41-bed7-49cf-84af-afdd4b6d3acb
 langcode: en
 status: true
 dependencies:
   module:
-    - node
-id: node.field_country
+    - taxonomy
+id: taxonomy_term.field_country
 field_name: field_country
-entity_type: node
+entity_type: taxonomy_term
 type: string
 settings:
   max_length: 255

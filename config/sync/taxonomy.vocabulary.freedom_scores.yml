@@ -1,0 +1,8 @@
+uuid: 6d8ef41c-b8c2-471d-a564-74aa2c694383
+langcode: en
+status: true
+dependencies: {  }
+name: 'Freedom Scores'
+vid: freedom_scores
+description: 'Freedom in the World is an annual global report on political rights and civil liberties.'
+weight: 0

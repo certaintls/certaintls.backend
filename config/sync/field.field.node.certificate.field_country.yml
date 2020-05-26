@@ -1,12 +1,10 @@
-uuid: 8b6805bb-9739-421c-b0ad-b2b818bbc684
+uuid: 885c2d88-62f6-4dd4-aa24-7aefa7799cde
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_country
     - node.type.certificate
-  module:
-    - address
 id: node.certificate.field_country
 field_name: field_country
 entity_type: node
@@ -17,6 +15,5 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  available_countries: {  }
-field_type: address_country
+settings: {  }
+field_type: string

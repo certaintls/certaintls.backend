@@ -1,0 +1,23 @@
+uuid: bf2942c1-223d-476f-a289-d3d0e55d695e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_score
+    - taxonomy.vocabulary.freedom_scores
+id: taxonomy_term.freedom_scores.field_score
+field_name: field_score
+entity_type: taxonomy_term
+bundle: freedom_scores
+label: Score
+description: 'The total score listed on https://freedomhouse.org/countries/freedom-world/scores'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 100
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,19 @@
+uuid: 912b1257-4bc2-4514-ae0d-82340871c8a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_country
+    - taxonomy.vocabulary.freedom_scores
+id: taxonomy_term.freedom_scores.field_country
+field_name: field_country
+entity_type: taxonomy_term
+bundle: freedom_scores
+label: 'Country code'
+description: 'Two-letter country codes. Because of inconsistency found in the certificates, sometimes area code e.g. "EU" is used.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
