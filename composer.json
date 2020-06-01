@@ -21,6 +21,7 @@
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
         "drupal/jsonapi_extras": "^3.14",
+        "drupal/redis": "^1.4",
         "drupal/simple_oauth": "^4.5",
         "drush/drush": "^10.2"
     },
