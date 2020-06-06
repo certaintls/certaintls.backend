@@ -46,3 +46,7 @@ node_modules
 
 # OAuth2 keys
 /keys
+
+# Custom
+html
+.vscode

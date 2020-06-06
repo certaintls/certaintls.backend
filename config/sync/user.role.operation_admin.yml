@@ -6,4 +6,24 @@ id: operation_admin
 label: 'Operation Admin'
 weight: -8
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access contextual links'
+  - 'access site in maintenance mode'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer users'
+  - 'change own username'
+  - 'create certificate content'
+  - 'create terms in freedom_scores'
+  - 'delete any certificate content'
+  - 'delete certificate revisions'
+  - 'delete own certificate content'
+  - 'delete terms in freedom_scores'
+  - 'edit any certificate content'
+  - 'edit own certificate content'
+  - 'edit terms in freedom_scores'
+  - 'revert certificate revisions'
+  - 'view certaintls in toolbar'
+  - 'view certificate revisions'
+  - 'view own unpublished content'

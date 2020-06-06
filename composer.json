@@ -23,6 +23,7 @@
         "drupal/jsonapi_extras": "^3.14",
         "drupal/redis": "^1.4",
         "drupal/simple_oauth": "^4.5",
+        "drupal/toolbar_menu": "^2.2",
         "drush/drush": "^10.2"
     },
     "conflict": {
