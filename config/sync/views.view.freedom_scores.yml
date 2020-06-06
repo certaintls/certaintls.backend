@@ -545,7 +545,20 @@ display:
           plugin_id: string
       sorts: {  }
       title: 'Freedom of Scores'
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: '<a href=''/admin/structure/taxonomy/manage/freedom_scores/add'' class="button button--action button--primary" data-drupal-link-system-path="admin/structure/taxonomy/manage/freedom_scores/add">Add a score</a>'
+            format: full_html
+          plugin_id: text
       footer: {  }
       empty: {  }
       relationships: {  }
