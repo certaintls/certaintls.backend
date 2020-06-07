@@ -1,0 +1,6 @@
+custom.settings:
+  title: 'CertainTLS settings'
+  description: 'Manage CertainTLS operational settings'
+  route_name: custom.settings
+  parent: system.admin_config_system
+  weight: -5

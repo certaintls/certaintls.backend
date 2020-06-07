@@ -19,7 +19,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 9
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -32,7 +32,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_country:
-    weight: 26
+    weight: 9
     settings:
       size: 60
       placeholder: ''
@@ -41,7 +41,7 @@ content:
     region: content
   field_issuer:
     type: string_textfield
-    weight: 5
+    weight: 4
     region: content
     settings:
       size: 60
@@ -49,7 +49,7 @@ content:
     third_party_settings: {  }
   field_program:
     type: options_select
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -61,16 +61,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_trustworthy:
-    type: boolean_checkbox
-    weight: 7
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   field_type:
     type: options_buttons
-    weight: 4
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -78,7 +71,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 8
     region: content
     third_party_settings: {  }
   title:
@@ -91,7 +84,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
@@ -101,5 +94,6 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_trustworthy: true
   promote: true
   sticky: true

@@ -1,15 +1,79 @@
 <?php
 
 use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * Implements hook_entity_bundle_field_info_alter().
- * Make certificate field_cert_sha256 unique.
+ * Make sure certificate field_cert_sha256 unique.
+ * Make sure freedom of scores country unqiue.
  */
 function custom_entity_bundle_field_info_alter(&$fields, EntityTypeInterface $entity_type, $bundle) {
   if ($entity_type->id() === 'node' && $bundle === 'certificate') {
     if (isset($fields['field_cert_sha256'])) {
       $fields['field_cert_sha256']->addConstraint('UniqueField', []);
+    }
+  }
+  if ($entity_type->id() === 'taxonomy_term' && $bundle === 'freedom_scores') {
+    if (isset($fields['field_country'])) {
+      $fields['field_country']->addConstraint('UniqueField', []);
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_insert().
+ * Update trustworthy on root certificates.
+ */
+function custom_entity_insert(EntityInterface $entity) {
+  if ($entity->getEntityTypeId() === 'taxonomy_term' && $entity->bundle() === 'freedom_scores') {
+    _update_certs_same_country_trustworthy($entity);
+  }
+}
+
+/**
+ * Implements hook_entity_update().
+ * Update trustworthy on root certificates.
+ */
+function custom_entity_update(EntityInterface $entity) {
+  if ($entity->getEntityTypeId() === 'taxonomy_term' && $entity->bundle() === 'freedom_scores') {
+    _update_certs_same_country_trustworthy($entity);
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ * Calculate trustworhy based on freedom of scores.
+ */
+function custom_entity_presave(EntityInterface $entity) {
+  if ($entity->getEntityTypeId() === 'node' && $entity->type->entity->id() === 'certificate') {
+    $country = $entity->field_country->value;
+    if (!empty($country)) {
+      $term_ids = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties(['field_country'=> $country]);
+      if (!empty($term_ids)) {
+        /** @var Drupal\taxonomy\Entity\Term $term */
+        $term = reset($term_ids);
+        $config = \Drupal::config('custom.settings');
+        $score_threshold = $config->get('score_threshold');
+        $entity->field_trustworthy->value = $term->field_score->value < $score_threshold ? false : true;
+      }
+    }
+  }
+}
+
+/**
+ * Update all certifcates' trustworthy from countries that < threshold.
+ */
+function _update_certs_same_country_trustworthy(Term $term) {
+  $config = \Drupal::config('custom.settings');
+  $score_threshold = $config->get('score_threshold');
+  $trustworthy = $term->field_score->value < $score_threshold ? false : true;
+  $country = $term->field_country->value;
+  $certs = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties(['type' => 'certificate', 'field_country'=> $country]);
+  foreach ($certs as $cert) {
+    if ($cert->field_trustworthy->value != $trustworthy) {
+      $cert->save();
     }
   }
 }

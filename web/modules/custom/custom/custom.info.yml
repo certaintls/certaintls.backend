@@ -4,3 +4,4 @@ description: Most arbitrary customization
 core: 8.x
 package: Custom
 dependencies:
+configure: custom.settings

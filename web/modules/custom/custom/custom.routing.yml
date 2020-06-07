@@ -1,0 +1,7 @@
+custom.settings:
+  path: '/admin/config/system/certaintls'
+  defaults:
+    _form: '\Drupal\custom\Form\Settings'
+    _title: 'CertainTLS settings'
+  requirements:
+    _permission: 'access content'
