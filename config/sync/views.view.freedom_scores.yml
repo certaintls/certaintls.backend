@@ -424,6 +424,12 @@ display:
           absolute: false
           entity_type: taxonomy_term
           plugin_id: entity_link_edit
+        taxonomy_term_bulk_form:
+          id: taxonomy_term_bulk_form
+          table: taxonomy_term_data
+          field: taxonomy_term_bulk_form
+          entity_type: taxonomy_term
+          plugin_id: bulk_form
       filters:
         status:
           value: '1'
@@ -556,7 +562,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: '<a href=''/admin/structure/taxonomy/manage/freedom_scores/add'' class="button button--action button--primary" data-drupal-link-system-path="admin/structure/taxonomy/manage/freedom_scores/add">Add a score</a>'
+            value: "<a href='/admin/structure/taxonomy/manage/freedom_scores/add' class=\"button button--action button--primary\" data-drupal-link-system-path=\"admin/structure/taxonomy/manage/freedom_scores/add\">Add a score</a>\r\n\r\n<a href='/admin/modules/uninstall/entity/taxonomy_term' class=\"button button--action button--primary\" data-drupal-link-system-path=\"admin/structure/taxonomy/manage/freedom_scores/add\">Delete ALL scores</a>\r\n\r\n<a href='/admin/config/development/csv-importer' class=\"button button--action button--primary\" data-drupal-link-system-path=\"admin/structure/taxonomy/manage/freedom_scores/add\">Fresh import</a>\r\n\r\n<a href='/admin/config/system/certaintls' class=\"button button--action button--primary\" data-drupal-link-system-path=\"admin/structure/taxonomy/manage/freedom_scores/add\">Change trustworthy threshold</a>"
             format: full_html
           plugin_id: text
       footer: {  }
@@ -569,7 +575,7 @@ display:
         groups:
           1: AND
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -593,7 +599,7 @@ display:
         menu_name: certaintls
         weight: -49
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'

@@ -8,6 +8,7 @@ module:
   config: 0
   consumers: 0
   contextual: 0
+  csv_importer: 0
   custom: 0
   datetime: 0
   dblog: 0
