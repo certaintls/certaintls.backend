@@ -1,0 +1,21 @@
+uuid: 06879b59-60ce-4dad-afd8-d0789b5a7af8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_os
+  module:
+    - options
+    - user
+id: user.user.field_os
+field_name: field_os
+entity_type: user
+bundle: user
+label: OS
+description: 'A string (linux, macos, windows, android, ios, or fuchsia) representing the operating system. See https://api.flutter.dev/flutter/package-platform_platform/Platform/operatingSystem.html'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

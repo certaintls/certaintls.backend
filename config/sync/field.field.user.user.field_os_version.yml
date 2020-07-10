@@ -1,0 +1,20 @@
+uuid: e4567c95-ae59-486b-8273-a689b8f31544
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_os_version
+  module:
+    - user
+id: user.user.field_os_version
+field_name: field_os_version
+entity_type: user
+bundle: user
+label: 'OS Version'
+description: 'A string representing the version of the operating system or platform. See https://api.flutter.dev/flutter/package-platform_platform/Platform/operatingSystemVersion.html'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

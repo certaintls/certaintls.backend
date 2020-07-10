@@ -1,0 +1,29 @@
+uuid: 1204ff96-a24d-49cc-af81-5bf225f39a58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_certificates
+    - node.type.certificate
+  module:
+    - user
+id: user.user.field_certificates
+field_name: field_certificates
+entity_type: user
+bundle: user
+label: Certificates
+description: 'The certificates that this device has.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      certificate: certificate
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

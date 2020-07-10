@@ -4,6 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_certificates
+    - field.field.user.user.field_locale_name
+    - field.field.user.user.field_os
+    - field.field.user.user.field_os_version
   module:
     - user
 _core:
@@ -14,4 +18,8 @@ bundle: user
 mode: compact
 content: {  }
 hidden:
+  field_certificates: true
+  field_locale_name: true
+  field_os: true
+  field_os_version: true
   member_for: true

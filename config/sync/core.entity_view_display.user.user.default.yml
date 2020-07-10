@@ -2,7 +2,13 @@ uuid: 224682b6-c2d9-49de-bab8-31b45b6544d0
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.field.user.user.field_certificates
+    - field.field.user.user.field_locale_name
+    - field.field.user.user.field_os
+    - field.field.user.user.field_os_version
   module:
+    - options
     - user
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
@@ -11,6 +17,37 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_certificates:
+    weight: 9
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_locale_name:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_os:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_os_version:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   member_for:
     weight: 5
     region: content

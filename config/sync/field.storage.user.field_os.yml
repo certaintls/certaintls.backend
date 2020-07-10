@@ -1,0 +1,39 @@
+uuid: 82525bf8-9a4d-4a7b-9703-62b6eeca92f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_os
+field_name: field_os
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: linux
+      label: Linux
+    -
+      value: macos
+      label: MacOS
+    -
+      value: windows
+      label: Windows
+    -
+      value: android
+      label: Android
+    -
+      value: ios
+      label: iOS
+    -
+      value: fuchsia
+      label: Fuchsia
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
