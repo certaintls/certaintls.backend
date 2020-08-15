@@ -7,8 +7,13 @@ There are many ways to set up a local enviroment for developing on Drupal. Pleas
 ### First time install:
 1. Clone this repository
 1. `composer install` in the root of the project, for more information on using composer in this project, please see [Using Composer](https://www.drupal.org/docs/develop/using-composer).
-1. You will need to install a new site from existing configuration
+1. Import the existing configuration (or you can [install a new site with existing configuration](https://www.drupal.org/node/2897299)):
+
+    * Edit your /web/sites/default/settings.php
+    * Add `$settings['config_sync_directory'] = DRUPAL_ROOT . '/../config/sync';`
+    * Run `drush config-import` command
 1. Generate a new pair of keys for simple_oauth (OAuth2) at `/admin/config/people/simple_oauth`
+1. Generate new OAuth2 clients at `/admin/config/services/consumer`
 
 ## Hosting in production notes:
 1. [Redis](https://redis.io/) is highly recommended, otherwise, you probably will see many "deadlocks" in caching.
