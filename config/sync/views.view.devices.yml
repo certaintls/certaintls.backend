@@ -333,7 +333,7 @@ display:
           relationship: none
           group_type: count
           admin_label: ''
-          label: Certificates
+          label: '# of Certificates'
           exclude: false
           alter:
             alter_text: false
@@ -374,6 +374,14 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ', '
+          format_plural: 0
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
           click_sort_column: target_id
           type: entity_reference_label
           settings:
@@ -386,7 +394,6 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ', '
           field_api_classes: false
           plugin_id: field
         created:

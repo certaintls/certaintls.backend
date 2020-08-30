@@ -18,13 +18,15 @@ bundle: user
 mode: default
 content:
   account:
-    weight: -10
+    weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
   contact:
     weight: 5
     region: content
   field_certificates:
-    weight: 10
+    weight: 6
     settings:
       match_operator: CONTAINS
       match_limit: 10
@@ -34,7 +36,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_display_name:
-    weight: 11
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -42,7 +44,7 @@ content:
     type: string_textfield
     region: content
   field_locale_name:
-    weight: 9
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -50,13 +52,13 @@ content:
     type: string_textfield
     region: content
   field_os:
-    weight: 7
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_os_version:
-    weight: 8
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -64,8 +66,10 @@ content:
     type: string_textfield
     region: content
   language:
-    weight: 0
+    weight: 1
     region: content
+    settings: {  }
+    third_party_settings: {  }
   timezone:
     weight: 6
     region: content

@@ -9,10 +9,12 @@ is_admin: null
 permissions:
   - 'access contextual links'
   - 'access site in maintenance mode'
+  - 'access site reports'
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'access user profiles'
   - 'administer users'
+  - 'bypass node access'
   - 'change own username'
   - 'create certificate content'
   - 'create terms in freedom_scores'

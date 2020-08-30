@@ -19,7 +19,7 @@ bundle: user
 mode: default
 content:
   field_certificates:
-    weight: 9
+    weight: 5
     label: above
     settings:
       link: true
@@ -27,37 +27,39 @@ content:
     type: entity_reference_label
     region: content
   field_display_name:
-    weight: 10
-    label: above
+    weight: 1
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_locale_name:
-    weight: 8
-    label: above
+    weight: 4
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_os:
-    weight: 6
-    label: above
+    weight: 2
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_os_version:
-    weight: 7
-    label: above
+    weight: 3
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   member_for:
-    weight: 5
+    weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }
