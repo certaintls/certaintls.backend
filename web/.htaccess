@@ -63,8 +63,8 @@ AddEncoding gzip svgz
   RewriteEngine on
 
   # Redirect front page to github profile repo
-  RewriteCond "%{QUERY_STRING}" "^$"
-  RewriteRule "^/$" https://github.com/certaintls [L,R=301,QSD]
+  RewriteCond %{REQUEST_URI} ^/$
+  Rewriterule ^(.*)$ https://github.com/certaintls [L,R=301]
 
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
