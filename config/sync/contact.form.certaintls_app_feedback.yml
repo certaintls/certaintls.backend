@@ -1,0 +1,12 @@
+uuid: 0e497131-a28e-46f1-a10a-4e72c930ca1e
+langcode: en
+status: true
+dependencies: {  }
+id: certaintls_app_feedback
+label: 'CertainTLS App Feedback'
+recipients:
+  - certaintls@gmail.com
+reply: ''
+weight: 0
+message: 'Thank you for your feedback or question.'
+redirect: ''
